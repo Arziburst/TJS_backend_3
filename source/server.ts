@@ -64,6 +64,7 @@ app.use(cors({
         'http://localhost:5000', // serve
         'http://192.168.99.100', // w10 docker
         'https://tjstore.pp.ua', // prod
+        'https://dev.tjstore.pp.ua', // prod
     ],
 }));
 app.use(formData.parse());

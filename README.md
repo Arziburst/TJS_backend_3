@@ -16,17 +16,15 @@ npm i
 
 npm run build
 
-docker build -t arziburst/tjstore-backend .
+docker build -t arziburst/tjs-backend-3 .
 
-docker push arziburst/tjstore-backend
+docker push arziburst/tjs-backend-3
 
 <!-- droplet -->
 
-docker pull arziburst/tjstore-backend
+docker pull arziburst/tjs-backend-3
 
-docker tag arziburst/tjstore-backend dokku/api
-
-dokku tags:deploy api
+dokku git:from-image dev-api arziburst/tjs-backend-3:latest
 
 <!-- Dokku fast docs -->
 dokku [module]:[report|help] 
